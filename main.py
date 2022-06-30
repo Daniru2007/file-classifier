@@ -35,7 +35,7 @@ for root, dirs, files in os.walk("src"):
 
     for file in files:
         file_type = file.split(".")[-1]
-        print(f"[{file_types.get(file_type, 'other').upper()}] {dst}//{file}")
+        print(f"[{file_types.get(file_type, 'other').upper()}] {file}")
         shutil.copy(f"{root}/{file}", f"{dst}/{file_types.get(file_type, 'other')}/{file}")
 
 
