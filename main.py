@@ -13,9 +13,13 @@ file_types = {
 
     # documents
     "doc": "docs", "docx": "docs", "xls": "docs", "xlsx": "docs", "ppt": "docs", "pptx": "docs",
+
+    # zips
+    "zip": "zip",
+    "7z": "zip"
 }
 
-out_dirs = ["img", "code", "doc", "other"]
+out_dirs = ["img", "code", "doc", "other", "zip"]
 
 for ftype in out_dirs:
     try:
@@ -31,7 +35,7 @@ for root, dirs, files in os.walk("src"):
 
     for file in files:
         file_type = file.split(".")[-1]
-        print(f"[FILE] {dst}/{file_types.get(file_type, 'other')}/{file}")
+        print(f"[{file_types.get(file_type, 'other').upper()}] {dst}//{file}")
         shutil.copy(f"{root}/{file}", f"{dst}/{file_types.get(file_type, 'other')}/{file}")
 
 
