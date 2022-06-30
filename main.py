@@ -1,8 +1,8 @@
 import os
 import shutil
 
-src = "src"
-dst = "dst"
+src = input("source: ")
+dst = input("destination: ")
 
 file_types = {
     # images
