@@ -1,5 +1,5 @@
 # Classify your files
 
 with this code you can categorize your files
-# <a href="build/file classifier.exe" download>Download</a>
+# [Download](build/file%20classifier.exe)
 <img src="preview.gif"></img>
